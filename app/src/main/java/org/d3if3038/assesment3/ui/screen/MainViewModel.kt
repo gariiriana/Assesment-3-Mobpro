@@ -1,4 +1,4 @@
-package org.d3if3038.mobpro1.ui.screen
+package org.d3if3038.assesment3.ui.screen
 
 import android.graphics.Bitmap
 import android.util.Log

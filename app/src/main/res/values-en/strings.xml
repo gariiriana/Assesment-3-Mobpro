@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Motorcycle Buying and Selling Forum</string>
+    <string name="error">Failed to load data.. Connection error</string>
+    <string name="try_again">Try Again</string>
+    <string name="profil">Profile</string>
+    <string name="tutup">Close</string>
+    <string name="logout">Logout</string>
+    <string name="tambah_motor">Add Motorcycle</string>
+    <string name="nama">Name</string>
+    <string name="nama_motor">Motorcycle Name</string>
+    <string name="batal">Cancel</string>
+    <string name="simpan">Save</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+    <string name="confirmation">Are you sure you want to delete this?</string>
+    <string name="iyaa">Yes</string>
+    <string name="tidak">No</string>
+    <string name="kosong">There are no motorbikes for sale yet</string>
+</resources>

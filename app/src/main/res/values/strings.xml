@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">assesment 3</string>
-    <string name="gambar">Gambar %1$s</string>
+    <string name="app_name">Forum Jual Beli Motor</string>
+    <string name="gambar" translatable="false">Gambar %1$s</string>
     <string name="error">Gagal memuat data.. Koneksi error</string>
     <string name="try_again">Coba lagi</string>
     <string name="profil">Profil</string>
     <string name="tutup">Tutup</string>
-    <string name="logout">Logout</string>
+    <string name="logout">Keluar</string>
     <string name="tambah_motor">Tambah Motor</string>
     <string name="nama">Nama</string>
     <string name="nama_motor">Nama Motor</string>
@@ -20,4 +20,5 @@
     <string name="confirmation">"Apakah kamu yakin ingin menghapus ini?"</string>
     <string name="iyaa">Iyaa</string>
     <string name="tidak">Tidak</string>
+    <string name="kosong">Belum Ada Motor Yang Dijual</string>
 </resources>

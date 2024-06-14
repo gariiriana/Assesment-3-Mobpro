@@ -1,4 +1,4 @@
-package org.d3if3038.mobpro1.ui.screen
+package org.d3if3038.assesment3.ui.screen
 
 
 import android.content.ContentResolver
@@ -11,6 +11,7 @@ import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -92,8 +93,6 @@ import org.d3if3038.assesment3.model.User
 import org.d3if3038.assesment3.network.ApiStatus
 import org.d3if3038.assesment3.network.MotorApi
 import org.d3if3038.assesment3.network.UserDataStore
-import org.d3if3038.assesment3.ui.screen.DeleteDialog
-import org.d3if3038.assesment3.ui.screen.MotorDialog
 import org.d3if3038.assesment3.util.SettingsDataStore
 
 @Composable
@@ -118,24 +117,40 @@ fun ScreenContent(viewModel: MainViewModel, userId: String, modifier: Modifier) 
         }
 
         ApiStatus.SUCCESS -> {
-            if (showList){
-                LazyVerticalGrid(
+            if (data.isEmpty()) {
+                Column(
                     modifier = modifier
                         .fillMaxSize()
-                        .padding(4.dp),
-                    columns = GridCells.Fixed(2),
-                    contentPadding = PaddingValues(bottom = 80.dp)
-                ){
-                    items(data) {
-                        GridItem(motor = it, userId)
-                    }
+                        .padding(16.dp),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(painter = painterResource(R.drawable._169253), contentDescription = stringResource(
+                        id = R.string.kosong
+                    ))
+                    Text(text = stringResource(id = R.string.kosong))
                 }
             } else {
-                LazyColumn(
-                    modifier = modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(bottom = 84.dp)){
-                    items(data){
-                        ListItem(motor = it, userId)
+                if (showList) {
+                    LazyVerticalGrid(
+                        modifier = modifier
+                            .fillMaxSize()
+                            .padding(4.dp),
+                        columns = GridCells.Fixed(2),
+                        contentPadding = PaddingValues(bottom = 80.dp)
+                    ) {
+                        items(data) {
+                            GridItem(motor = it, userId)
+                        }
+                    }
+                } else {
+                    LazyColumn(
+                        modifier = modifier.fillMaxSize(),
+                        contentPadding = PaddingValues(bottom = 84.dp)
+                    ) {
+                        items(data) {
+                            ListItem(motor = it, userId)
+                        }
                     }
                 }
             }
@@ -159,7 +174,6 @@ fun ScreenContent(viewModel: MainViewModel, userId: String, modifier: Modifier) 
             }
         }
     }
-
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
