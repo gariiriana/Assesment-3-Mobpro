@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">assesment 3</string>
+    <string name="gambar">Gambar %1$s</string>
+    <string name="error">Gagal memuat data.. Koneksi error</string>
+    <string name="try_again">Coba lagi</string>
+    <string name="profil">Profil</string>
+    <string name="tutup">Tutup</string>
+    <string name="logout">Logout</string>
+    <string name="tambah_motor">Tambah Motor</string>
+    <string name="nama">Nama</string>
+    <string name="nama_motor">Nama Motor</string>
+    <string name="batal">Batal</string>
+    <string name="simpan">Simpan</string>
+    <string name="bagikan_template" translatable="false">
+        Motorcycle Name : %1$s\n
+        Price Motorcycle : %2$s\n
+    </string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+    <string name="confirmation">"Apakah kamu yakin ingin menghapus ini?"</string>
+    <string name="iyaa">Iyaa</string>
+    <string name="tidak">Tidak</string>
+</resources>
